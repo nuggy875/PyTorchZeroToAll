@@ -17,8 +17,11 @@ def loss(x, y):
 
 
 # compute gradient
+# -- loss function 을 w에 대해서 미분한 식.
+# -- 이 식을 빼줌으로서 기울기가 0보다 클때는 빼주고, 작을때는 더해줄 수 있게 됨.
 def gradient(x, y):  # d_loss/d_w
     return 2 * x * (x * w - y)
+
 
 # Before training
 print("predict (before training)",  4, forward(4))
